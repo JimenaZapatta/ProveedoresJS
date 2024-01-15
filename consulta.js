@@ -13,4 +13,4 @@ let resultado= ListaPagos.includes(razonsocial)
 if(resultado == true){
     alert("Pueden pasar a cobrar el martes desde 8:30 a 12:00, gracias.");
 }
-else {alert(razonsocial +":"+ " "+ "No hay pago para dicha empresa, consutar nuevamente el jueves que viene.")}
+else {alert(razonsocial +":"+ " "+ "No hay pago para dicha empresa, consultar nuevamente el jueves que viene.")}
