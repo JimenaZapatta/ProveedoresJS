@@ -15,7 +15,6 @@ let ingresers= prompt("Ingrese Razón Social").toLowerCase().trim();
 if (ingresers== ""){
 
     alert ("favor ingresa razón social");
-for (break;)
 
 }else { (alert ("Bienvenido" +" "+ ingresers))}
 
