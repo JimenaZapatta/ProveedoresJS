@@ -19,7 +19,7 @@ Buscar.addEventListener ("click", function(){
      const rutok = lista.filter(Rut => ingrut.includes(result1));
 
     const pagoviernes = document.createElement("div");
-    pagoviernes.innerHTML = `<p>${rutok.Razónsocial} puede pasar el viernes desde 8:30 a 12:00</p>`;
+    pagoviernes.innerHTML = <p>${rutok.Razónsocial} puede pasar el viernes desde 8:30 a 12:00</p>;
    
     buscardor.appendChild(pagoviernes); 
 
