@@ -10,24 +10,48 @@ let prov5 = new listapagos (127, "Tor")
 
 let lista = [prov1,prov2,prov3,prov4,prov5];
 
-const Buscar = document.getElementById ("buscar")
-const buscardor= document.querySelector("#buscador")
-const result1 = document.getElementById("ingrut").value;
+const Buscar = document.getElementById ("buscar");
+const buscador= document.querySelector("#buscador");
+
 Buscar.addEventListener ("click", function(){
-    if( ingrut === "") {
+    const result1 = document.getElementById("ingrut").value;
+    if( result1 === "") {
         alert("Ingresar Rut");
         return;
     }
-const pagoencontrado = lista.length (Rut===ingrut)
     
- if (pagoencontrado){
+    const pagoencontrado = lista.find(item => item.Rut === parseInt(result1));
+    
+    if (pagoencontrado) {
+        const pagoviernes = document.createElement("div");
+        pagoviernes.innerHTML =`<p>$${pagoencontrado.Razónsocial} puede pasar el viernes desde 8:30 a 12:00</p>`;
+        buscador.appendChild(pagoviernes);
+    } else {
+        alert("No se encontró ningún pago.");
+    }
+});
 
-    const pagoviernes = document.createElement("div");
-    pagoviernes.innerHTML = <p>$${rutok.Razónsocial} puede pasar el viernes desde 8:30 a 12:00</p>;
-   
-    buscardor.appendChild(pagoviernes); 
-}else {
-    alert ("No se encontro ningun pago.")
-}
-});    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
