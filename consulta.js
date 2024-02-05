@@ -28,6 +28,7 @@ Buscar.addEventListener ("click", function(){
             const pagoviernes = document.createElement("div");
             pagoviernes.innerHTML =`<p>${pagoencontrado.Razónsocial} puede pasar el viernes desde 8:30 a 12:00</p>`;
             mostrarbusqueda.appendChild(pagoviernes);
+            
         } else {
             alert("No se encontró ningún pago.");
         }
