@@ -13,7 +13,7 @@ let lista = [prov1,prov2,prov3,prov4,prov5];
 const Buscar = document.getElementById ("buscar");
 const mostrarbusqueda= document.querySelector("#mostrarbusqueda");
 
-Buscar.addEventListener ("click", function(){
+Buscar.addEventListener("click", function(){
 
     const result1 = document.getElementById("ingrut").value;        
         const pagoencontrado = lista.find(item => item.Rut === parseInt(result1));
@@ -24,15 +24,23 @@ Buscar.addEventListener ("click", function(){
         
         
         
-        if (pagoencontrado) {
+        if (typeof(pagoencontrado)!=="undefined") {
             const pagoviernes = document.createElement("div");
+            
             pagoviernes.innerHTML =`<p>${pagoencontrado.Razónsocial} puede pasar el viernes desde 8:30 a 12:00</p>`;
             mostrarbusqueda.appendChild(pagoviernes);
+            localStorage.setItem (pagoencontrado,lista.rut)
             
         } else {
             alert("No se encontró ningún pago.");
-        }
-    });
+
+            
+            
+            
+        } 
+        
+
+    }); 
   
    
 
